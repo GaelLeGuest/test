@@ -18,3 +18,15 @@ def fusion(g,d):
             resultat.append(d[j])
             j += 1
     return resultat + g[i:] + d[j:]
+
+def recherche_dicho(l,x):
+    g,d = 0, len(l)-1
+    while g<=d:
+        m = (g+d)//2
+        if l[m] == x:
+            return m
+        elif l[m] < x:
+            g = m+1
+        else:
+            d = m-1
+
