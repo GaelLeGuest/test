@@ -30,3 +30,14 @@ def recherche_dicho(l,x):
         else:
             d = m-1
 
+def fibonnacci_dyn(n):
+    c=[ 0 for i in range(n+1)]
+    c[0] = 0
+    c[1] = 1
+    for i in range(2,n+1):
+        if c[i] == 0:
+            c[i] = c[i-1] + c[i-2]
+    return c[n]
+
+
+print(fibonnacci_dyn(40))
